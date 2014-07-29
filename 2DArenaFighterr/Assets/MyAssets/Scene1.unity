@@ -117,6 +117,10 @@ Prefab:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
+      propertyPath: jump
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
   m_RootGameObject: {fileID: 1507300803}
@@ -542,7 +546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   facingRight: 1
-  jump: 0
+  jump: 1
   moveForce: 365
   maxSpeed: 10
   jumpClips: []
@@ -550,6 +554,7 @@ MonoBehaviour:
   taunts: []
   tauntProbability: 50
   tauntDelay: 1
+  grounded: 0
 --- !u!61 &1507300805
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -3,10 +3,10 @@ using System.Collections;
 
 public class PlayerControl : MonoBehaviour
 {
-	[HideInInspector]
+
 	public bool facingRight = true;			// For determining which way the player is currently facing.
-	[HideInInspector]
-	public booljump = false;				// Condition for whether the player should jump.
+
+	public bool jump = false;				// Condition for whether the player should jump.
 
 	public float moveForce = 365f;			// Amount of force added to move the player left and right.
 	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
@@ -19,7 +19,7 @@ public class PlayerControl : MonoBehaviour
 
 	private int tauntIndex;					// The index of the taunts array indicating the most recent taunt.
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
-	private bool grounded = false;			// Whether or not the player is grounded.
+	public bool grounded = false;			// Whether or not the player is grounded.
 	private Animator anim;					// Reference to the player's animator component.
 
 
@@ -34,7 +34,8 @@ public class PlayerControl : MonoBehaviour
 	void Update ()
 	{
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-//		grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));  
+	//grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
+
 
 		// If the jump button is pressed and the player is grounded then the player should jump.
 		if (Input.GetButtonDown ("Jump") && grounded)
@@ -128,5 +129,17 @@ public class PlayerControl : MonoBehaviour
 		else
 			// Otherwise return this index.
 			return i;
+	}
+
+	void OnCollisionEnter2D(Collision2D coll) {
+				if (coll.gameObject.tag == "Wall") {
+						grounded = true;
+				}
+		}
+	void OnCollisionExit2D(Collision2D coll) {
+		if (coll.gameObject.tag == "Wall") {
+						grounded = false;
+				}
+		
 	}
 }
