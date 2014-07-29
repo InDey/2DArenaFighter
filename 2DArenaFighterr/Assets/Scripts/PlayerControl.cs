@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour
 	public bool facingRight = true;			// For determining which way the player is currently facing.
 
 	public bool jump = false;				// Condition for whether the player should jump.
+	public int jumpCount = 0;
 
 	public float moveForce = 365f;			// Amount of force added to move the player left and right.
 	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
@@ -38,8 +39,10 @@ public class PlayerControl : MonoBehaviour
 
 
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if (Input.GetButtonDown ("Jump") && grounded)
+		if (Input.GetButtonDown ("Jump") && grounded && jumpCount<2){
 			jump = true;
+			jumpCount += 1;
+		}
 	}
 
 	void FixedUpdate ()
@@ -70,7 +73,7 @@ public class PlayerControl : MonoBehaviour
 			Flip ();
 
 		// If the player should jump...
-		if (jump) {
+		if (jump && jumpCount <= 2) {
 			// Set the Jump animator trigger parameter.
 //			anim.SetTrigger ("Jump");
 
@@ -82,7 +85,8 @@ public class PlayerControl : MonoBehaviour
 			rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied. dasfa adf adsf adsf adsf adsf adf asdf adsf adsf asd fadf asdf asdf adsf asdf asdf asd fasf dadsf 
-			jump = false;
+	 		jump = false;
+			
 		}
 	}
 
@@ -134,12 +138,13 @@ public class PlayerControl : MonoBehaviour
 	void OnCollisionEnter2D(Collision2D coll) {
 				if (coll.gameObject.tag == "Wall") {
 						grounded = true;
+						jumpCount = 0;
 				}
 		}
-	void OnCollisionExit2D(Collision2D coll) {
-		if (coll.gameObject.tag == "Wall") {
-						grounded = false;
-				}
+	// void OnCollisionExit2D(Collision2D coll) {
+	// 	if (coll.gameObject.tag == "Wall") {
+	// 					grounded = false;
+	// 			}
 		
-	}
+	// }
 }

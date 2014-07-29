@@ -98,13 +98,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   jump: 0
+  jumpCount: 0
   moveForce: 365
-  maxSpeed: 10
+  maxSpeed: 50
   jumpClips: []
-  jumpForce: 1000
+  jumpForce: 4000
   taunts: []
   tauntProbability: 50
   tauntDelay: 1
+  grounded: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
