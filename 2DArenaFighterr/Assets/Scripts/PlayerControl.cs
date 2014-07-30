@@ -61,6 +61,9 @@ public class PlayerControl : MonoBehaviour
 				float h = Input.GetAxis ("Horizontal");
 				float v = Input.GetAxis ("Vertical");
 
+				// stop the playing from spinning
+				transform.eulerAngles = new Vector3 (0, 0, 0);
+
 				// The Speed animator parameter is set to the absolute value of the horizontal input.
 //		anim.SetFloat("Speed", Mathf.Abs(h));
 
