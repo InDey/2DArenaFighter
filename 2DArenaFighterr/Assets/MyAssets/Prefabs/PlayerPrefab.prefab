@@ -99,6 +99,9 @@ MonoBehaviour:
   facingRight: 1
   jump: 0
   jumpCount: 0
+  dodge: 0
+  dodgeDist: 15
+  canDodge: 0
   moveForce: 365
   maxSpeed: 50
   jumpClips: []
