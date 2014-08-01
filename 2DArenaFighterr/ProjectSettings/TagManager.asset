@@ -12,13 +12,16 @@ TagManager:
   - BombPickup
   - ExplosionFX
   - HealthBar
+  - Platform
+  - 
+  - 
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
   Builtin Layer 3: 
   Builtin Layer 4: Water
-  Builtin Layer 5: 
+  Builtin Layer 5: UI
   Builtin Layer 6: 
   Builtin Layer 7: 
   User Layer 8: Bombs
@@ -26,8 +29,8 @@ TagManager:
   User Layer 10: Enemies
   User Layer 11: Pickups
   User Layer 12: Ground
-  User Layer 13: 
-  User Layer 14: 
+  User Layer 13: Platforms
+  User Layer 14: Walls
   User Layer 15: 
   User Layer 16: 
   User Layer 17: 
