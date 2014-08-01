@@ -181,9 +181,9 @@ public class Pirate : baseCharacter
 	public Pirate ()
 	{
 		speed = 40;
-		jumps = 2;
-		jumpForce = 6000;
-		dodgeDist = 10;
+		jumps = 3;
+		jumpForce = 4000;
+		dodgeDist = 15;
 	}
 }
 
@@ -193,7 +193,7 @@ public class Ninja : baseCharacter
 	{
 		speed = 50;
 		jumps = 4;
-		jumpForce = 5000;
+		jumpForce = 3500;
 		dodgeDist = 20;
 	}
 }
@@ -204,7 +204,7 @@ public class Knight : baseCharacter
 	{
 		speed = 30;
 		jumps = 1;
-		jumpForce = 8000;
+		jumpForce = 7500;
 		dodgeDist = 5;
 	}
 }
@@ -213,10 +213,10 @@ public class Wizard : baseCharacter
 {
 	public Wizard ()
 	{
-		speed = 35;
-		jumps = 3;
-		jumpForce = 5500;
-		dodgeDist = 10;
+		speed = 40;
+		jumps = 2;
+		jumpForce = 4500;
+		dodgeDist = 30;
 	}
 }
 
