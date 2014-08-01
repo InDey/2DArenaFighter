@@ -93,19 +93,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6804babace5cc47dd8b61abb292c4be2, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f6bd2060cb1e1d4da3622a4514d5912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   facingRight: 1
   jump: 0
   jumpCount: 0
   dodge: 0
-  dodgeDist: 15
+  dodgeDist: 10
   canDodge: 0
+  DodgeDelay: 1
   moveForce: 365
-  maxSpeed: 50
+  maxSpeed: 5
   jumpClips: []
-  jumpForce: 4000
+  jumpForce: 1000
   taunts: []
   tauntProbability: 50
   tauntDelay: 1

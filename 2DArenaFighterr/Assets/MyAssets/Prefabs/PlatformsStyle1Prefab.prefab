@@ -8,9 +8,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: PlatformsStyle1Prefab
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,9 +27,9 @@ GameObject:
   - 23: {fileID: 2300000}
   - 61: {fileID: 6100002}
   - 61: {fileID: 6100000}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Platform3
-  m_TagString: Wall
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,9 +46,9 @@ GameObject:
   - 23: {fileID: 2300002}
   - 61: {fileID: 6100004}
   - 61: {fileID: 6100006}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Platform2
-  m_TagString: Wall
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,9 +65,9 @@ GameObject:
   - 23: {fileID: 2300004}
   - 61: {fileID: 6100010}
   - 61: {fileID: 6100008}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Platform1
-  m_TagString: Wall
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
