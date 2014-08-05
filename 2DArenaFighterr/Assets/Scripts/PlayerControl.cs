@@ -19,6 +19,10 @@ public class PlayerControl : MonoBehaviour
 	public float moveForce = 365f;			// Amount of force added to move the player left and right.
 	public float maxSpeed = 50f;				// The fastest the player can travel in the x axis.
 
+	public bool canShoot = false;			// Condition for whether the player should shoot
+	public bool shoot = false;				// When true, the player shoots
+	public Rigidbody2D ninjaStar;			// NinjaStar prefab
+	public float starSpeed = 2f;			// NinjaStar's thrown velocity
 
 	public AudioClip[] taunts;				// Array of clips for when the player taunts.
 	public float tauntProbability = 50f;	// Chance of a taunt happening.
@@ -46,6 +50,11 @@ public class PlayerControl : MonoBehaviour
 		// If the Dodge button "f" is pressed then the player can dodge
 		if (Input.GetButtonDown ("Dodge") && (canDodge || grounded)) {
 			dodge = true;
+		}
+
+		// If the Throw button "q" is pressed and canShoot is ready
+		if (Input.GetButtonDown ("Shoot")) {
+			shoot = true;
 		}
 	}
 
@@ -125,6 +134,24 @@ public class PlayerControl : MonoBehaviour
 			canDodge = false;
 			transform.position = new Vector3 (transform.position.x + (h * dodgeDist), transform.position.y + (v * dodgeDist), 0);
 			
+		}
+
+		// If the player should shoot...
+		if (shoot) {
+			shoot = false;
+			canShoot = false;
+			if(facingRight)
+			{
+				// ... instantiate the ninja star facing right and set it's velocity to the right. 
+				Rigidbody2D bulletInstance = Instantiate(ninjaStar, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
+				bulletInstance.velocity = new Vector2(starSpeed, 0);
+			}
+			else
+			{
+				// Otherwise instantiate the rocket facing left and set it's velocity to the left.
+				Rigidbody2D bulletInstance = Instantiate(ninjaStar, transform.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
+				bulletInstance.velocity = new Vector2(-starSpeed, 0);
+			}
 		}
 	}
 
