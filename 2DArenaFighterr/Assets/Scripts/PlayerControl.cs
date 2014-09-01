@@ -140,17 +140,22 @@ public class PlayerControl : MonoBehaviour
 		if (shoot) {
 			shoot = false;
 			canShoot = false;
-			if(facingRight)
+
+			GameObject obj = ObjectPooler.current.GetPooledObject();
+			
+			if (obj != null) 
 			{
-				// ... instantiate the ninja star facing right and set it's velocity to the right. 
-				Rigidbody2D bulletInstance = Instantiate(ninjaStar, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
-				bulletInstance.velocity = new Vector2(starSpeed, 0);
-			}
-			else
-			{
-				// Otherwise instantiate the rocket facing left and set it's velocity to the left.
-				Rigidbody2D bulletInstance = Instantiate(ninjaStar, transform.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
-				bulletInstance.velocity = new Vector2(-starSpeed, 0);
+				obj.transform.position = transform.position;
+				obj.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+				obj.SetActive(true);
+				
+				if (facingRight) {
+					obj.transform.rotation = Quaternion.Euler(new Vector3(180f, 0, 0));
+					obj.rigidbody2D.velocity = new Vector2(starSpeed, 0);
+				} else {
+					obj.transform.position = new Vector3(transform.position.x - 1f, transform.position.y, 0);
+					obj.rigidbody2D.velocity = new Vector2(-starSpeed, 0);
+				}
 			}
 		}
 	}
