@@ -99,18 +99,24 @@ MonoBehaviour:
   facingRight: 1
   jump: 0
   jumpCount: 0
+  maxJumps: 2
+  jumpClips: []
+  jumpForce: 1000
   dodge: 0
   dodgeDist: 10
   canDodge: 0
   DodgeDelay: 1
   moveForce: 365
   maxSpeed: 5
-  jumpClips: []
-  jumpForce: 1000
+  canShoot: 0
+  shoot: 0
+  ninjaStar: {fileID: 5000000, guid: 8e8143830cb2ac441b88b3d73a907b51, type: 2}
+  starSpeed: 75
   taunts: []
   tauntProbability: 50
   tauntDelay: 1
   grounded: 0
+  charChoice: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
