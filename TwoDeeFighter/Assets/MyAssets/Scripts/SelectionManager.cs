@@ -36,16 +36,32 @@ public class SelectionManager : MonoBehaviour
 
     void Awake()
     {
+        // P1 setup
         P1choice = new playerChoice();
         P1choice.icon = GameObject.FindGameObjectWithTag("P1");
         P1choice.icon.transform.position = P1Pos[P1choice.index].position;
+        // P2 setup
+        P2choice = new playerChoice();
+        P2choice.icon = GameObject.FindGameObjectWithTag("P2");
+        P2choice.icon.transform.position = P2Pos[P2choice.index].position;
+        // P3 setup
+        P3choice = new playerChoice();
+        P3choice.icon = GameObject.FindGameObjectWithTag("P3");
+        P3choice.icon.transform.position = P3Pos[P3choice.index].position;
+        // P4 setup
+        P4choice = new playerChoice();
+        P4choice.icon = GameObject.FindGameObjectWithTag("P4");
+        P4choice.icon.transform.position = P4Pos[P4choice.index].position;
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        
-       
+        moveCharacter(P1, P1choice, P1Pos);
+        moveCharacter(P2, P1choice, P1Pos);
+        moveCharacter(P3, P1choice, P1Pos);
+        moveCharacter(P4, P1choice, P1Pos);
     }
 
     void moveCharacter(string Player, playerChoice pChoice, Transform[] pPos)
