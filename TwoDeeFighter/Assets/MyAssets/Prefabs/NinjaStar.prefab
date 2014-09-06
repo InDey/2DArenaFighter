@@ -65,7 +65,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8525d1a82aebc54f86a13150c24d291, type: 3}
+  m_Script: {fileID: 11500000, guid: 8470891d338944f0b9277de458331fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ninjaStar: {fileID: 100000}
