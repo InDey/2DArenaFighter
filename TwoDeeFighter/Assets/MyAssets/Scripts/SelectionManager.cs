@@ -157,6 +157,22 @@ public class SelectionManager : MonoBehaviour
         // START GAME
         if (Input.GetButtonUp("Start") && (num_Players_selected >= 1))
         {
+            if (P1choice.finalChoice != null)
+            {
+                Debug.Log("sending P1 index: " + P1choice.index);
+            }
+            if (P2choice.finalChoice != null)
+            {
+                Debug.Log("sending P2 index: " + P2choice.index);
+            }
+            if (P3choice.finalChoice != null)
+            {
+                Debug.Log("sending P3 index: " + P3choice.index);
+            }
+            if (P4choice.finalChoice != null)
+            {
+                Debug.Log("sending P4 index: " + P4choice.index);
+            }
             PlayerPrefs.SetInt("numPlayers", num_Players_selected);
             Application.LoadLevel("Scene1");
         }
