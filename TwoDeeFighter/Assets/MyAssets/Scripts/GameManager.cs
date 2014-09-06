@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour {
 
 	private Character addCharacter(GameObject player, int character) 
 	{
+		Debug.Log ("Char: " + character);
 		switch (character)
 		{
 		case Character.WAREWOLF:
