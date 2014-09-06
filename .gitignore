@@ -24,7 +24,8 @@
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -42,6 +43,18 @@ ehthumbs.db
 
 # Folder config file
 Desktop.ini
+
+# Useless Unity files
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
