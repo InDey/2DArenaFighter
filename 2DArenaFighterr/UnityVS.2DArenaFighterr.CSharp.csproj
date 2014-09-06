@@ -48,6 +48,12 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityVS.2DArenaFighterr.CSharp.Plugins.csproj">
+      <Project>{636820D1-81EE-9A59-14AF-0505CF7DCB6D}</Project>
+      <Name>UnityVS.2DArenaFighterr.CSharp.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\MyAssets\Scripts\Character\Character.cs" />
     <Compile Include="Assets\MyAssets\Scripts\Character\CharacterKnight.cs" />
     <Compile Include="Assets\MyAssets\Scripts\Character\CharacterRedBaron.cs" />
@@ -76,6 +82,15 @@
     <Compile Include="Assets\MyAssets\Scripts\Scripts\Scripts\General Scripts\ActivateTrigger.cs" />
     <Compile Include="Assets\MyAssets\Scripts\Scripts\SetParticleSortingLayer.cs" />
     <Compile Include="Assets\MyAssets\Scripts\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Ouya\LitJson\IJsonWrapper.cs" />
+    <Compile Include="Assets\Ouya\LitJson\JsonData.cs" />
+    <Compile Include="Assets\Ouya\LitJson\JsonException.cs" />
+    <Compile Include="Assets\Ouya\LitJson\JsonMapper.cs" />
+    <Compile Include="Assets\Ouya\LitJson\JsonReader.cs" />
+    <Compile Include="Assets\Ouya\LitJson\JsonWriter.cs" />
+    <Compile Include="Assets\Ouya\LitJson\Lexer.cs" />
+    <Compile Include="Assets\Ouya\LitJson\ParserToken.cs" />
+    <Compile Include="Assets\Ouya\SDK\Scripts\OuyaGameObject.cs" />
     <Compile Include="Assets\RagePixel\Code\IRagePixel.cs" />
     <Compile Include="Assets\RagePixel\Code\RagePixelAnimation.cs" />
     <Compile Include="Assets\RagePixel\Code\RagePixelBitmap.cs" />
@@ -86,6 +101,10 @@
     <Compile Include="Assets\RagePixel\Code\RagePixelSprite.cs" />
     <Compile Include="Assets\RagePixel\Code\RagePixelSpriteSheet.cs" />
     <Compile Include="Assets\RagePixel\Demo\Walker.cs" />
+    <None Include="Assets\Ouya\LitJson\license.txt" />
+    <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\res\layout\main.xml" />
+    <None Include="Assets\Plugins\Android\res\values\strings.xml" />
     <None Include="Assets\RagePixel\Code\RagePixelBasic.shader" />
     <None Include="Assets\RagePixel\Code\RagePixelBasicFlash.shader" />
     <None Include="Assets\RagePixel\readme.txt" />

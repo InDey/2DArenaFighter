@@ -51,12 +51,20 @@
      <Compile Include="Assets\MyAssets\Scripts\Scripts\Scripts\Camera Scripts\SmoothLookAt.js" />
      <Compile Include="Assets\MyAssets\Scripts\Scripts\Scripts\General Scripts\DragRigidbody.js" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="Assets\Ouya\LitJson\license.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\Plugins\Android\res\values\strings.xml" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\RagePixel\readme.txt" />
+     <None Include="Assets\Plugins\Android\res\layout\main.xml" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\RagePixel\Code\RagePixelBasicFlash.shader" />
      <None Include="Assets\RagePixel\Code\RagePixelBasic.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{4A6877C0-FCF7-21C2-4B7B-E528DE8E27DA}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
