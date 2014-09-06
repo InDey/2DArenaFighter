@@ -125,25 +125,25 @@ public class SelectionManager : MonoBehaviour
         }
 
         // canceling selection
-        if (Input.GetButtonDown(P1 + KEY_A) && !p1CanMove)
+        if (Input.GetButtonDown(P1 + KEY_A) && p1CanMove == false)
         {
             p1CanMove = true;
             P1choice.finalChoice = null;
             num_Players_selected--;
         }
-        if (Input.GetButtonDown(P2 + KEY_A) && !p2CanMove)
+        if (Input.GetButtonDown(P2 + KEY_A) && p2CanMove == false)
         {
             p2CanMove = true;
             P2choice.finalChoice = null;
             num_Players_selected--;
         }
-        if (Input.GetButtonDown(P3 + KEY_A) && !p3CanMove)
+        if (Input.GetButtonDown(P3 + KEY_A) && p3CanMove == false)
         {
             p3CanMove = true;
             P3choice.finalChoice = null;
             num_Players_selected--;
         }
-        if (Input.GetButtonDown(P4 + KEY_A) && !p4CanMove)
+        if (Input.GetButtonDown(P4 + KEY_A) && p4CanMove == false)
         {
             p4CanMove = true;
             P4choice.finalChoice = null;
@@ -151,8 +151,9 @@ public class SelectionManager : MonoBehaviour
         }
 
         // START GAME
-        if (Input.GetButtonUp("Start") && (num_Players_selected >= 1))
+        if (Input.GetButtonUp("Start") && (num_Players_selected > 1))
         {
+            PlayerPrefs.SetInt("numPlayers", num_Players_selected);
             Application.LoadLevel("Scene1");
         }
     }
