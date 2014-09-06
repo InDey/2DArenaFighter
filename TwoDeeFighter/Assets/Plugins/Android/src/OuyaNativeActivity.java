@@ -1,4 +1,4 @@
-package com.Company.ProductName;
+package com.JackTimAlex.TwoDeeFighter;
 
 import tv.ouya.console.api.*;
 import tv.ouya.console.api.OuyaController;
