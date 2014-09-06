@@ -55,6 +55,7 @@ ExportedObj/
 *.user
 *.unityproj
 *.booproj
+*.DotSettings
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
