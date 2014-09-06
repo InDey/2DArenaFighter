@@ -151,7 +151,7 @@ public class SelectionManager : MonoBehaviour
         }
 
         // START GAME
-        if (Input.GetButtonUp("Start"))
+        if (Input.GetButtonUp("Start") && (num_Players_selected >= 1))
         {
             Application.LoadLevel("Scene1");
         }
