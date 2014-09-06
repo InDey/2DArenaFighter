@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Ninja : baseCharacter
+public class CharacterWarewolf : Character
 {
-    public Ninja()
+	public CharacterWarewolf()
     {
         speed = 50;
-        jumps = 4;
+        jumpCount = 4;
         jumpForce = 3500;
         dodgeDist = 20;
     }

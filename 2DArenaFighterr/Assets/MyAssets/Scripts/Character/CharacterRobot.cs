@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Wizard : baseCharacter
+public class CharacterRobot : Character
 {
-    public Wizard()
+	public CharacterRobot()
     {
         speed = 40;
-        jumps = 2;
+        jumpCount = 2;
         jumpForce = 4500;
         dodgeDist = 30;
     }

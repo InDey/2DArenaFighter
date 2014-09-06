@@ -325,62 +325,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 602690575}
   m_RootOrder: 3
---- !u!1001 &371920293
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -41.3079224
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
-      propertyPath: m_Name
-      value: Cube
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
-      propertyPath: ninjaStar
-      value: 
-      objectReference: {fileID: 2080379809}
-    - target: {fileID: 11400000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
-      propertyPath: starSpeed
-      value: 75
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
-  m_RootGameObject: {fileID: 1507300803}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &602690574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +1035,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
-  m_PrefabInternal: {fileID: 371920293}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1507300809}
@@ -1112,7 +1056,7 @@ BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6100000, guid: d628c8b38e0c31b4cb67dd15742ccd0b,
     type: 2}
-  m_PrefabInternal: {fileID: 371920293}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1507300803}
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: 24ac79603fb61400588e37d9f6fe952a, type: 2}
@@ -1124,7 +1068,7 @@ Rigidbody2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5000000, guid: d628c8b38e0c31b4cb67dd15742ccd0b,
     type: 2}
-  m_PrefabInternal: {fileID: 371920293}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1507300803}
   m_Mass: 1
   m_LinearDrag: 0
@@ -1140,7 +1084,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: d628c8b38e0c31b4cb67dd15742ccd0b,
     type: 2}
-  m_PrefabInternal: {fileID: 371920293}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1507300803}
   m_Enabled: 1
   m_CastShadows: 1
@@ -1161,14 +1105,14 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: d628c8b38e0c31b4cb67dd15742ccd0b,
     type: 2}
-  m_PrefabInternal: {fileID: 371920293}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1507300803}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1507300809
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: d628c8b38e0c31b4cb67dd15742ccd0b, type: 2}
-  m_PrefabInternal: {fileID: 371920293}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1507300803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -41.3079224, z: 0}
@@ -1181,34 +1125,32 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: d628c8b38e0c31b4cb67dd15742ccd0b,
     type: 2}
-  m_PrefabInternal: {fileID: 371920293}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1507300803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f6bd2060cb1e1d4da3622a4514d5912, type: 3}
+  m_Script: {fileID: 11500000, guid: 6bcf08af6ab114e40ba1ccfce53a8e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   facingRight: 1
+  grounded: 0
   jump: 0
   jumpCount: 0
-  maxJumps: 2
+  maxJumps: 1
   jumpClips: []
-  jumpForce: 1000
+  jumpForce: 7500
   dodge: 0
   dodgeDist: 10
-  canDodge: 0
+  canDodge: 1
   DodgeDelay: 1
   moveForce: 365
-  maxSpeed: 5
+  maxSpeed: 50
   canShoot: 0
   shoot: 0
-  ninjaStar: {fileID: 2080379809}
   starSpeed: 75
   taunts: []
   tauntProbability: 50
   tauntDelay: 1
-  grounded: 0
-  charChoice: 0
 --- !u!1 &1680232929
 GameObject:
   m_ObjectHideFlags: 0

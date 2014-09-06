@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Pirate : baseCharacter
+public class CharacterRedBaron : Character
 {
-    public Pirate()
+	public CharacterRedBaron()
     {
         speed = 40;
-        jumps = 3;
+        jumpCount = 3;
         jumpForce = 4000;
         dodgeDist = 15;
     }

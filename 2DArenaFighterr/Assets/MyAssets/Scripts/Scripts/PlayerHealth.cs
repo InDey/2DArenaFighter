@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
 	private SpriteRenderer healthBar;			// Reference to the sprite renderer of the health bar.
 	private float lastHitTime;					// The time at which the player was last hit.
 	private Vector3 healthScale;				// The local scale of the health bar initially (with full health).
-	private PlayerControl playerControl;		// Reference to the PlayerControl script.
+	private Character playerControl;		// Reference to the PlayerControl script.
 	private Animator anim;						// Reference to the Animator on the player
 
 
@@ -56,7 +56,7 @@ public class PlayerHealth : MonoBehaviour
 					}
 
 					// ... disable user Player Control script
-					GetComponent<PlayerControl> ().enabled = false;
+					GetComponent<Character> ().enabled = false;
 
 					// ... disable the Gun script to stop a dead guy shooting a nonexistant bazooka
 					GetComponentInChildren<Gun> ().enabled = false;
