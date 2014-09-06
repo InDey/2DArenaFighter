@@ -934,6 +934,47 @@ Prefab:
   m_RootGameObject: {fileID: 959219409}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1367255928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1367255930}
+  - 114: {fileID: 1367255929}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1367255929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367255928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56fe01f9ea86cbe4e9ac0e145a4232a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numPlayers: 2
+  Players: []
+--- !u!4 &1367255930
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367255928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.391941071, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1 &1412118291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,6 +1219,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   facingRight: 1
   grounded: 0
+  lives: 5
+  hasLives: 1
+  kills: 0
+  points: 0
   jump: 0
   jumpCount: 0
   maxJumps: 1
