@@ -32,7 +32,7 @@ public class SelectionManager : MonoBehaviour
     public class playerChoice
     {
         public GameObject icon;
-        public int index = 0;
+        public int index = -1;
         public GameObject finalChoice;
     }
 
@@ -60,27 +60,33 @@ public class SelectionManager : MonoBehaviour
         P1choice = new playerChoice();
         P1choice.finalChoice = null;
         P1choice.icon = GameObject.FindGameObjectWithTag("P1");
-        P1choice.icon.transform.position = P1Pos[P1choice.index].position;
-
-        // P2 setup
+		if (P1choice.index >= 0) {
+			P1choice.icon.transform.position = P1Pos[P1choice.index].position;
+		}
+		
+		// P2 setup
         P2choice = new playerChoice();
         P2choice.finalChoice = null;
         P2choice.icon = GameObject.FindGameObjectWithTag("P2");
-        P2choice.icon.transform.position = P2Pos[P2choice.index].position;
+		if (P2choice.index >= 0) {
+			P2choice.icon.transform.position = P2Pos [P2choice.index].position;
+		}
 
         // P3 setup
         P3choice = new playerChoice();
         P3choice.finalChoice = null;
         P3choice.icon = GameObject.FindGameObjectWithTag("P3");
-        P3choice.icon.transform.position = P3Pos[P3choice.index].position;
+		if (P3choice.index >= 0) {
+			P3choice.icon.transform.position = P3Pos [P3choice.index].position;
+		}
 
         // P4 setup
         P4choice = new playerChoice();
         P4choice.finalChoice = null;
         P4choice.icon = GameObject.FindGameObjectWithTag("P4");
-        P4choice.icon.transform.position = P4Pos[P4choice.index].position;
-
-
+		if (P4choice.index >= 0) {
+			P4choice.icon.transform.position = P4Pos [P4choice.index].position;
+		}
     }
 
 
