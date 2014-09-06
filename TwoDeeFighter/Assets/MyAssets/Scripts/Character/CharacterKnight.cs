@@ -4,6 +4,7 @@ public class CharacterKnight : Character
 {
 	public CharacterKnight()
     {
+		characterType = KNIGHT;
         speed = 30;
 		jumpCount = 1;
 		jumpForce = 7500;

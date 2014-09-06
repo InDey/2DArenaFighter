@@ -7,6 +7,7 @@ public class CharacterWarewolf : Character
 {
 	public CharacterWarewolf()
     {
+		characterType = WAREWOLF;
         speed = 50;
         jumpCount = 4;
         jumpForce = 3500;
