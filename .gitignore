@@ -55,6 +55,7 @@ ExportedObj/
 *.user
 *.unityproj
 *.booproj
+*.DotSettings
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
@@ -64,6 +65,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+<<<<<<< HEAD
 *.sln
 *.csproj
 *.csproj
@@ -71,3 +73,7 @@ $RECYCLE.BIN/
 *.suo
 *.sln
 *.suo
+=======
+*.csproj
+
+>>>>>>> master
