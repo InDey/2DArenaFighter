@@ -10,15 +10,20 @@ public class Character : MonoBehaviour
 	public const int KNIGHT = 1;
 	public const int RED_BARON = 2;
 	public const int ROBOT = 3;
-	protected int characterType = -1;
 
-	public const String TAG_JUMP = "KeyO";
-	public const String TAG_DODGE = "KeyA";
-	public const String TAG_MOVE1 = "KeyU";
-	public const String TAG_MOVE2 = "KeyY";
+	public String TAG_JUMP = "P1KeyO";
+	public String TAG_DODGE = "P1KeyA";
+	public String TAG_MOVE1 = "P1KeyU";
+	public String TAG_MOVE2 = "P1KeyY";
+	public String TAG_HOR = "P1Horizontal";
+	public String TAG_VER = "P1Vertical";
+
 	public const String TAG_GROUND = "ground";
 	public const String TAG_PLATFORM = "Platform";
 	public const String TAG_WALL = "Wall";
+	
+	public int characterType = -1;
+	public int playerNumber = 0;
 
     public bool facingRight = true;			// For determining which way the player is currently facing.
     public bool grounded = false;		    // Whether or not the player is grounded.
@@ -98,8 +103,8 @@ public class Character : MonoBehaviour
     public void PlayerMovement()
     {
         // Cache the horizontal input.
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+		float h = Input.GetAxis(TAG_HOR);
+		float v = Input.GetAxis(TAG_VER);
 
         // stop the playing from spinning
         //TODO fix this when touching uneven ground
@@ -139,7 +144,7 @@ public class Character : MonoBehaviour
 		}
 
         // Shoot
-		if (shoot) {
+		if (canShoot && shoot) {
 			Shoot (h, v);
 		}
     }
@@ -174,7 +179,7 @@ public class Character : MonoBehaviour
     public void Dodge(float h, float v)
     {
 	    dodge = false;
-	    canDodge = false;
+		canDodge = false;
 	    transform.position = new Vector3(transform.position.x + (h * dodgeDist), transform.position.y + (v * dodgeDist), 0);
     }
 
@@ -193,6 +198,49 @@ public class Character : MonoBehaviour
         this.maxJumps = maxJumps;
         this.jumpForce = jumpForce;
     }
+
+	public void setPlayerNumber(int playerNumber)
+	{
+		switch (playerNumber) 
+		{
+		case 0:
+		{
+			TAG_JUMP = "P1KeyO";
+			TAG_DODGE = "P1KeyA";
+			TAG_MOVE1 = "P1KeyU";
+			TAG_MOVE2 = "P1KeyY";
+			TAG_HOR = "P1Horizontal";
+			TAG_VER = "P1Vertical";
+		} break;
+		case 1:
+		{
+			TAG_JUMP = "P2KeyO";
+			TAG_DODGE = "P2KeyA";
+			TAG_MOVE1 = "P2KeyU";
+			TAG_MOVE2 = "P2KeyY";
+			TAG_HOR = "P2Horizontal";
+			TAG_VER = "P2Vertical";
+		} break;
+		case 2:
+		{
+			TAG_JUMP = "P3KeyO";
+			TAG_DODGE = "P3KeyA";
+			TAG_MOVE1 = "P3KeyU";
+			TAG_MOVE2 = "P3KeyY";
+			TAG_HOR = "P3Horizontal";
+			TAG_VER = "P3Vertical";
+		} break;
+		case 3:
+		{
+			TAG_JUMP = "P4KeyO";
+			TAG_DODGE = "P4KeyA";
+			TAG_MOVE1 = "P4KeyU";
+			TAG_MOVE2 = "P4KeyY";
+			TAG_HOR = "P4Horizontal";
+			TAG_VER = "P4Vertical";
+		} break;
+		}
+	}
 
     public float getSpeed()
     {
@@ -219,35 +267,11 @@ public class Character : MonoBehaviour
 		return characterType;
 	}
 
-    public static Character getCharacter(int type)
-    {
-        switch (type)
-        {
-            case WAREWOLF:
-                {
-                    CharacterWarewolf warewolf = new CharacterWarewolf();
-                    //TODO set any initial things here
-                    return warewolf;
-                } 
-            case KNIGHT:
-                {
-                    CharacterKnight knight = new CharacterKnight();
-                    return knight;
-                } 
-            case RED_BARON:
-                {
-                    CharacterRedBaron redbaron = new CharacterRedBaron();
-                    return redbaron;
-                } 
-            case ROBOT:
-                {
-                    CharacterRobot robot = new CharacterRobot();
-                    return robot;
-                } 
-        }
-        return null;
-    }
-
+	public int getPlayerNumber()
+	{
+		return playerNumber;
+	}
+	
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == TAG_GROUND || coll.gameObject.tag == TAG_PLATFORM || coll.gameObject.tag == TAG_WALL)
