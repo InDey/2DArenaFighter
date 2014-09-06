@@ -188,11 +188,11 @@ public class SelectionManager : MonoBehaviour
 
     void moveCharacter()
     {
-        if (Input.GetButtonDown(P1 + "LeftRight"))
+        if (Input.GetButtonDown(P1 + "LeftRight") && p1CanMove)
         {
             reposition(P1, P1choice, P1Pos);
         }
-        if (Input.GetButtonDown(P2 + "LeftRight"))
+        if (Input.GetButtonDown(P2 + "LeftRight") && p2CanMove)
         {
             reposition(P2, P2choice, P2Pos);
         }
