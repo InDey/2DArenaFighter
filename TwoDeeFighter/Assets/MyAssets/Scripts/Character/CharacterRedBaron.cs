@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class CharacterRedBaron : Character
 {
-    public List<Sprite> spriteIdle;
+    public Sprite spriteIdle;
 
 	public CharacterRedBaron()
     {
@@ -15,6 +15,7 @@ public class CharacterRedBaron : Character
         jumpCount = 3;
         jumpForce = 4000;
         dodgeDist = 15;
+        SpriteRenderer.Instantiate(spriteIdle);
 
     }
 }
