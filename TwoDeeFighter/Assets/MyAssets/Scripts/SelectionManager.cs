@@ -58,21 +58,25 @@ public class SelectionManager : MonoBehaviour
 
         // P1 setup
         P1choice = new playerChoice();
+        P1choice.finalChoice = null;
         P1choice.icon = GameObject.FindGameObjectWithTag("P1");
         P1choice.icon.transform.position = P1Pos[P1choice.index].position;
 
         // P2 setup
         P2choice = new playerChoice();
+        P2choice.finalChoice = null;
         P2choice.icon = GameObject.FindGameObjectWithTag("P2");
         P2choice.icon.transform.position = P2Pos[P2choice.index].position;
 
         // P3 setup
         P3choice = new playerChoice();
+        P3choice.finalChoice = null;
         P3choice.icon = GameObject.FindGameObjectWithTag("P3");
         P3choice.icon.transform.position = P3Pos[P3choice.index].position;
 
         // P4 setup
         P4choice = new playerChoice();
+        P4choice.finalChoice = null;
         P4choice.icon = GameObject.FindGameObjectWithTag("P4");
         P4choice.icon.transform.position = P4Pos[P4choice.index].position;
 
@@ -91,7 +95,7 @@ public class SelectionManager : MonoBehaviour
     {
         Debug.Log("number players selected: " + num_Players_selected);
         // Select Characters
-        if (Input.GetButtonDown(P1 + KEY_O) && p1CanMove)
+        if (Input.GetButtonDown(P1 + KEY_O) && (p1CanMove == true))
         {
             p1CanMove = false;
             P1choice.finalChoice = selectCharacter(P1choice.index);
@@ -99,7 +103,7 @@ public class SelectionManager : MonoBehaviour
             PlayerPrefs.SetInt("p1Choice", P1choice.index);
             num_Players_selected++;
         }
-        if (Input.GetButtonDown(P2 + KEY_O) && p2CanMove)
+        if (Input.GetButtonDown(P2 + KEY_O) && (p2CanMove == true))
         {
             p2CanMove = false;
             P2choice.finalChoice = selectCharacter(P2choice.index);
@@ -107,7 +111,7 @@ public class SelectionManager : MonoBehaviour
             PlayerPrefs.SetInt("p2Choice", P2choice.index);
             num_Players_selected++;
         }
-        if (Input.GetButtonDown(P3 + KEY_O) && p3CanMove)
+        if (Input.GetButtonDown(P3 + KEY_O) && (p3CanMove == true))
         {
             p3CanMove = false;
             P3choice.finalChoice = selectCharacter(P3choice.index);
@@ -115,7 +119,7 @@ public class SelectionManager : MonoBehaviour
             PlayerPrefs.SetInt("p3Choice", P3choice.index);
             num_Players_selected++;
         }
-        if (Input.GetButtonDown(P4 + KEY_O) && p4CanMove)
+        if (Input.GetButtonDown(P4 + KEY_O) && (p4CanMove == true))
         {
             p4CanMove = false;
             P4choice.finalChoice = selectCharacter(P4choice.index);
@@ -189,11 +193,11 @@ public class SelectionManager : MonoBehaviour
 
     void moveCharacter()
     {
-        if (Input.GetButtonDown(P1 + "LeftRight") && p1CanMove)
+        if (Input.GetButtonDown(P1 + "LeftRight") && (p1CanMove == true))
         {
             reposition(P1, P1choice, P1Pos);
         }
-        if (Input.GetButtonDown(P2 + "LeftRight") && p2CanMove)
+        if (Input.GetButtonDown(P2 + "LeftRight") && (p2CanMove == true))
         {
             reposition(P2, P2choice, P2Pos);
         }
