@@ -24,7 +24,8 @@
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -32,6 +33,7 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
 
 # Windows
 # =========================
@@ -43,6 +45,18 @@ ehthumbs.db
 # Folder config file
 Desktop.ini
 
+# Useless Unity files
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
@@ -51,7 +65,10 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-*.csproj
 *.sln
+*.csproj
 *.unityproj
 *.suo
+*.sln
+
+
