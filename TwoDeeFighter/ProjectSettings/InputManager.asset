@@ -34,7 +34,11 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
+<<<<<<< HEAD
     axis: 0
+=======
+    axis: 1
+>>>>>>> PrePushToMaster
     joyNum: 0
   - serializedVersion: 3
     m_Name: KeyO
@@ -57,7 +61,11 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
+<<<<<<< HEAD
     positiveButton: joystick button 1
+=======
+    positiveButton: joystick button 3
+>>>>>>> PrePushToMaster
     altNegativeButton: 
     altPositiveButton: mouse 1
     gravity: 1000
@@ -89,7 +97,11 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
+<<<<<<< HEAD
     positiveButton: joystick button 3
+=======
+    positiveButton: joystick button 1
+>>>>>>> PrePushToMaster
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
