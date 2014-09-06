@@ -76,8 +76,6 @@ public class GameManager : MonoBehaviour {
 		} 
 		case Character.RED_BARON:
         {
-            SpriteRenderer renderer = player.GetComponent<SpriteRenderer>();
-            renderer.sprite = spriteIdle;
 			return player.AddComponent<CharacterRedBaron>();
 		} 
 		case Character.ROBOT:
