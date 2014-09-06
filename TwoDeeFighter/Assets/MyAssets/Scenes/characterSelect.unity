@@ -1289,6 +1289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c1c1b5953bc6845a0e820b420df2a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  num_Players_selected: 0
   P1Pos:
   - {fileID: 330884515}
   - {fileID: 23793626}
@@ -1309,6 +1310,10 @@ MonoBehaviour:
   - {fileID: 562884916}
   - {fileID: 594685576}
   - {fileID: 485034186}
+  p1CanMove: 1
+  p2CanMove: 1
+  p3CanMove: 1
+  p4CanMove: 1
   Warewolf: {fileID: 792810812}
   Knight: {fileID: 1651122350}
   Red_Baron: {fileID: 650595690}
