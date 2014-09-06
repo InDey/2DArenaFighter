@@ -49,6 +49,11 @@ public class SelectionManager : MonoBehaviour
     void Awake()
     {
         num_Players_selected = 0;
+        p1CanMove = true;
+        p2CanMove = true;
+        p3CanMove = true;
+        p4CanMove = true;
+
         //TODO make these start at the starting position until you move
 
         // P1 setup
@@ -71,12 +76,18 @@ public class SelectionManager : MonoBehaviour
         P4choice.icon = GameObject.FindGameObjectWithTag("P4");
         P4choice.icon.transform.position = P4Pos[P4choice.index].position;
 
-        InvokeRepeating("moveCharacter", .2f, .2f);
+
     }
 
 
     // Update is called once per frame
     void Update()
+    {
+        moveCharacter();
+        inputs();
+    }
+
+    void inputs()
     {
         Debug.Log("number players selected: " + num_Players_selected);
         // Select Characters
@@ -142,10 +153,8 @@ public class SelectionManager : MonoBehaviour
         // START GAME
         if (Input.GetButtonUp("Start") && (num_Players_selected > 1))
         {
-            
             Application.LoadLevel("Scene1");
         }
-
     }
 
     // Select character method
@@ -179,27 +188,27 @@ public class SelectionManager : MonoBehaviour
 
     void moveCharacter()
     {
-        if (Input.GetButton(P1 + HORIZ) && p1CanMove)
+        if (Input.GetButtonDown(P1 + "LeftRight"))
         {
             reposition(P1, P1choice, P1Pos);
         }
-        if (Input.GetButton(P2 + HORIZ) && p2CanMove)
+        if (Input.GetButtonDown(P2 + "LeftRight"))
         {
             reposition(P2, P2choice, P2Pos);
         }
-        if (Input.GetButton(P3 + HORIZ) && p3CanMove)
-        {
-            reposition(P3, P3choice, P3Pos);
-        }
-        if (Input.GetButton(P4 + HORIZ) && p4CanMove)
-        {
-            reposition(P4, P4choice, P4Pos);
-        }
+        //if (Input.GetButton(P3 + "LeftRight") && p3CanMove)
+        //{
+        //    reposition(P3, P3choice, P3Pos);
+        //}
+        //if (Input.GetButton(P4 + "LeftRight") && p4CanMove)
+        //{
+        //    reposition(P4, P4choice, P4Pos);
+        //}
     }
 
     void reposition(string Player, playerChoice pChoice, Transform[] pPos)
     {
-        if (Input.GetAxis(Player + HORIZ) > 0)
+        if (Input.GetAxis(Player + "LeftRight") > 0)
         {
             if (pChoice.index == NUM_CHARS - 1)
             {
@@ -211,7 +220,7 @@ public class SelectionManager : MonoBehaviour
                 pChoice.icon.transform.position = pPos[++pChoice.index].position;
             }
         }
-        else if (Input.GetAxis(P1 + HORIZ) < 0)
+        else if (Input.GetAxis(Player + "LeftRight") < 0)
         {
             if (pChoice.index == 0)
             {
