@@ -17,7 +17,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 0
     joyNum: 0
   - serializedVersion: 3
@@ -33,15 +33,15 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Move1
+    m_Name: KeyO
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: h
+    positiveButton: joystick button 0
     altNegativeButton: 
     altPositiveButton: mouse 0
     gravity: 1000
@@ -53,11 +53,11 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Move2
+    m_Name: KeyU
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: j
+    positiveButton: joystick button 1
     altNegativeButton: 
     altPositiveButton: mouse 1
     gravity: 1000
@@ -69,11 +69,11 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Move3
+    m_Name: KeyY
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: k
+    positiveButton: joystick button 2
     altNegativeButton: 
     altPositiveButton: mouse 2
     gravity: 1000
@@ -85,11 +85,11 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Move4
+    m_Name: KeyA
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: l
+    positiveButton: joystick button 3
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -117,7 +117,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Dodge
+    m_Name: KeyR1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -133,7 +133,7 @@ InputManager:
     axis: 1
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Shoot
+    m_Name: KeyL1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -149,7 +149,7 @@ InputManager:
     axis: 2
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Window Shake X
+    m_Name: KeyR2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -165,7 +165,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Window Shake Y
+    m_Name: KeyL2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -177,7 +177,7 @@ InputManager:
     sensitivity: .100000001
     snap: 0
     invert: 0
-    type: 3
+    type: 0
     axis: 1
     joyNum: 0
   - serializedVersion: 3
