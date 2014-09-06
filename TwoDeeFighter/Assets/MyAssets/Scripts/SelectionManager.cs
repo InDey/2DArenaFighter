@@ -40,18 +40,22 @@ public class SelectionManager : MonoBehaviour
         P1choice = new playerChoice();
         P1choice.icon = GameObject.FindGameObjectWithTag("P1");
         P1choice.icon.transform.position = P1Pos[P1choice.index].position;
+        InvokeRepeating("moveCharacter(P1, P1choice, P1Pos)", .25f, .25f);
         // P2 setup
         P2choice = new playerChoice();
         P2choice.icon = GameObject.FindGameObjectWithTag("P2");
         P2choice.icon.transform.position = P2Pos[P2choice.index].position;
+        //InvokeRepeating("moveCharacter(P2, P2choice, P2Pos)", .5f, .5f);
         // P3 setup
         P3choice = new playerChoice();
         P3choice.icon = GameObject.FindGameObjectWithTag("P3");
         P3choice.icon.transform.position = P3Pos[P3choice.index].position;
+        //InvokeRepeating("moveCharacter(P3, P3choice, P3Pos)", .5f, .5f);
         // P4 setup
         P4choice = new playerChoice();
         P4choice.icon = GameObject.FindGameObjectWithTag("P4");
         P4choice.icon.transform.position = P4Pos[P4choice.index].position;
+        //InvokeRepeating("moveCharacter(P4, P4choice, P4Pos)", .5f, .5f);
     }
 
 
@@ -68,7 +72,7 @@ public class SelectionManager : MonoBehaviour
     {
         if (Input.GetButtonDown(Player + HORIZ))
         {
-            if (Input.GetAxis(Player + HORIZ) > 0) 
+            if (Input.GetAxis(Player + HORIZ) > 0)
             {
                 if (pChoice.index == NUM_CHARS - 1)
                 {
@@ -87,7 +91,7 @@ public class SelectionManager : MonoBehaviour
                     pChoice.index = NUM_CHARS - 1;
                     pChoice.icon.transform.position = pPos[pChoice.index].position;
                 }
-                else 
+                else
                 {
                     pChoice.icon.transform.position = pPos[--pChoice.index].position;
                 }
