@@ -1497,7 +1497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8525d1a82aebc54f86a13150c24d291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ninjaStar: {fileID: 2080379805}
 --- !u!1001 &2126695508
 Prefab:
   m_ObjectHideFlags: 0
