@@ -59,6 +59,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  Warewolf: {fileID: 0}
+  Knight: {fileID: 0}
+  Red_Baron: {fileID: 0}
+  Robot: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -787,34 +787,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
---- !u!1 &1169307490
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1169307491}
-  m_Layer: 0
-  m_Name: p3pos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1169307491
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1169307490}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.91396213, y: -1.98231542, z: -.100000001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 792810814}
-  m_RootOrder: 2
---- !u!1001 &1431999350
+--- !u!1001 &1065310712
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -917,6 +890,22 @@ Prefab:
       propertyPath: P4Pos.Array.data[3]
       value: 
       objectReference: {fileID: 485034186}
+    - target: {fileID: 11400000, guid: 0d792bd869f10734eb091c08829ac4ac, type: 2}
+      propertyPath: Warewolf
+      value: 
+      objectReference: {fileID: 792810812}
+    - target: {fileID: 11400000, guid: 0d792bd869f10734eb091c08829ac4ac, type: 2}
+      propertyPath: Knight
+      value: 
+      objectReference: {fileID: 1651122350}
+    - target: {fileID: 11400000, guid: 0d792bd869f10734eb091c08829ac4ac, type: 2}
+      propertyPath: Red_Baron
+      value: 
+      objectReference: {fileID: 650595690}
+    - target: {fileID: 11400000, guid: 0d792bd869f10734eb091c08829ac4ac, type: 2}
+      propertyPath: Robot
+      value: 
+      objectReference: {fileID: 398351931}
     - target: {fileID: 100000, guid: 0d792bd869f10734eb091c08829ac4ac, type: 2}
       propertyPath: m_Name
       value: SelectionManager
@@ -926,6 +915,33 @@ Prefab:
   m_RootGameObject: {fileID: 2066993323}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1169307490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1169307491}
+  m_Layer: 0
+  m_Name: p3pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1169307491
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169307490}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.91396213, y: -1.98231542, z: -.100000001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 792810814}
+  m_RootOrder: 2
 --- !u!1 &1499282026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,7 +1265,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 0d792bd869f10734eb091c08829ac4ac, type: 2}
-  m_PrefabInternal: {fileID: 1431999350}
+  m_PrefabInternal: {fileID: 1065310712}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2066993325}
@@ -1266,7 +1282,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 0d792bd869f10734eb091c08829ac4ac,
     type: 2}
-  m_PrefabInternal: {fileID: 1431999350}
+  m_PrefabInternal: {fileID: 1065310712}
   m_GameObject: {fileID: 2066993323}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1293,11 +1309,15 @@ MonoBehaviour:
   - {fileID: 562884916}
   - {fileID: 594685576}
   - {fileID: 485034186}
+  Warewolf: {fileID: 792810812}
+  Knight: {fileID: 1651122350}
+  Red_Baron: {fileID: 650595690}
+  Robot: {fileID: 398351931}
 --- !u!4 &2066993325
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 0d792bd869f10734eb091c08829ac4ac, type: 2}
-  m_PrefabInternal: {fileID: 1431999350}
+  m_PrefabInternal: {fileID: 1065310712}
   m_GameObject: {fileID: 2066993323}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.04933667, y: -.727124453, z: 0}

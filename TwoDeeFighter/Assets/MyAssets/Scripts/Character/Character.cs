@@ -6,9 +6,9 @@ using System.Text;
 
 public class Character : MonoBehaviour
 {
-	public const int WAREWOLF = 0;
-	public const int KNIGHT = 1;
-	public const int RED_BARON = 2;
+	public const int WAREWOLF = 1;
+	public const int KNIGHT = 2;
+	public const int RED_BARON = 0;
 	public const int ROBOT = 3;
 
 	public String TAG_JUMP = "P1KeyO";
