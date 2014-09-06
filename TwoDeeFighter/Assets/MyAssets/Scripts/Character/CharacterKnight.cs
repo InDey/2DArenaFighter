@@ -10,14 +10,14 @@ public class CharacterKnight : Character
 		jumpForce = 7500;
 		dodgeDist = 5;
 		maxJumps = 1;
+		canShoot = true;
     }
 
     
 	public override void Shoot(float h, float v)
 	{
 		shoot = false;
-		canShoot = false;
-		
+
 		GameObject obj = ObjectPooler.current.GetPooledObject();
 		
 		if (obj != null)
