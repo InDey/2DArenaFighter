@@ -2,7 +2,9 @@ fileFormatVersion: 2
 guid: 56fe01f9ea86cbe4e9ac0e145a4232a7
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player: {instanceID: 0}
+  - spriteIdle: {fileID: 21300000, guid: 89aaf972fc4df204ba080fc354e53b76, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

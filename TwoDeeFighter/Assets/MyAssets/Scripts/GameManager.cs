@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
     // Public variables
     public List<GameObject> Players;
 	public GameObject player;
+    public Sprite spriteIdle;
 
     // Private variables
 
@@ -74,7 +75,9 @@ public class GameManager : MonoBehaviour {
 			return player.AddComponent<CharacterKnight>();
 		} 
 		case Character.RED_BARON:
-		{
+        {
+            SpriteRenderer renderer = player.GetComponent<SpriteRenderer>();
+            renderer.sprite = spriteIdle;
 			return player.AddComponent<CharacterRedBaron>();
 		} 
 		case Character.ROBOT:

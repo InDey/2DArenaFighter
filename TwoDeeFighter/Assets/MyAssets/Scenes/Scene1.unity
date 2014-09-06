@@ -884,7 +884,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Players: []
-  player: {fileID: 100000, guid: 3367f12a53da745ad8bb1debbe85b2d1, type: 2}
+  player: {fileID: 100000, guid: c8ac5a3a7668d49baaa42912278d0a2e, type: 2}
+  spriteIdle: {fileID: 21300000, guid: 2cfdd79f653d3c94ab1d0ba384bc20eb, type: 3}
 --- !u!4 &1367255930
 Transform:
   m_ObjectHideFlags: 0
