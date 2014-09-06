@@ -24,10 +24,10 @@ public class SelectionManager : MonoBehaviour
     public Transform[] P3Pos = new Transform[NUM_CHARS];
     public Transform[] P4Pos = new Transform[NUM_CHARS];
 
-    public bool p1CanMove = true;
-    public bool p2CanMove = true;
-    public bool p3CanMove = true;
-    public bool p4CanMove = true;
+    public static bool p1CanMove = true;
+    public static bool p2CanMove = true;
+    public static bool p3CanMove = true;
+    public static bool p4CanMove = true;
 
     public class playerChoice
     {
@@ -151,7 +151,7 @@ public class SelectionManager : MonoBehaviour
         }
 
         // START GAME
-        if (Input.GetButtonUp("Start") && (num_Players_selected > 1))
+        if (Input.GetButtonUp("Start") && (num_Players_selected >= 1))
         {
             PlayerPrefs.SetInt("numPlayers", num_Players_selected);
             Application.LoadLevel("Scene1");
