@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6100000}
   - 212: {fileID: 21200000}
   - 60: {fileID: 6000000}
+  - 114: {fileID: 11400000}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -236,6 +237,44 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3751776cb105146d7aa98f5790859795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TAG_JUMP: P1KeyO
+  TAG_DODGE: P1KeyA
+  TAG_MOVE1: P1KeyU
+  TAG_MOVE2: P1KeyY
+  TAG_HOR: P1Horizontal
+  TAG_VER: P1Vertical
+  characterType: 0
+  playerNumber: 0
+  facingRight: 1
+  grounded: 0
+  jump: 0
+  jumpCount: 3
+  maxJumps: 2
+  jumpClips: []
+  jumpForce: 4000
+  dodge: 0
+  dodgeDist: 15
+  canDodge: 0
+  DodgeDelay: 1
+  moveForce: 365
+  maxSpeed: 50
+  canShoot: 0
+  shoot: 0
+  starSpeed: 2
+  taunts: []
+  tauntProbability: 50
+  tauntDelay: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -256,7 +295,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 89aaf972fc4df204ba080fc354e53b76, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

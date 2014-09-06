@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UnityEngine.Sprites;
+using UnityEngine;
 
 public class CharacterRedBaron : Character
 {
+    public List<Sprite> spriteIdle;
+
 	public CharacterRedBaron()
     {
 		characterType = RED_BARON;
@@ -13,5 +15,6 @@ public class CharacterRedBaron : Character
         jumpCount = 3;
         jumpForce = 4000;
         dodgeDist = 15;
+
     }
 }

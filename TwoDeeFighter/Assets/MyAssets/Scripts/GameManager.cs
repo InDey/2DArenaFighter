@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
 		if (PlayerPrefs.HasKey("p1Choice"))
 		{
 			int p1Choice = PlayerPrefs.GetInt("p1Choice");
+            Debug.Log("P1 has a choice of:" + p1Choice);
 			if (p1Choice >= 0) {
 				GameObject player1 = (GameObject) Instantiate(player, transform.position, transform.rotation);
 				Character character = addCharacter (player1, p1Choice);
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour {
 		if (PlayerPrefs.HasKey("p2Choice"))
 		{
 			int p2Choice = PlayerPrefs.GetInt("p2Choice");
+            Debug.Log("P2 has a choice of:" + p2Choice);
 			if (p2Choice >= 0) {
 				GameObject player2 = (GameObject) Instantiate(player, transform.position, transform.rotation);
 				Character character = addCharacter (player2, p2Choice);
