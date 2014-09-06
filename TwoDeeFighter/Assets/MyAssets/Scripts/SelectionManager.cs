@@ -133,24 +133,29 @@ public class SelectionManager : MonoBehaviour
         {
             p1CanMove = true;
             P1choice.finalChoice = null;
+			PlayerPrefs.SetInt("p1Choice", -1);
             num_Players_selected--;
         }
         if (Input.GetButtonDown(P2 + KEY_A) && p2CanMove == false)
         {
             p2CanMove = true;
             P2choice.finalChoice = null;
+			PlayerPrefs.SetInt("p2Choice", -1);
             num_Players_selected--;
         }
         if (Input.GetButtonDown(P3 + KEY_A) && p3CanMove == false)
         {
             p3CanMove = true;
             P3choice.finalChoice = null;
+			PlayerPrefs.SetInt("p3Choice", -1);
             num_Players_selected--;
         }
         if (Input.GetButtonDown(P4 + KEY_A) && p4CanMove == false)
         {
             p4CanMove = true;
             P4choice.finalChoice = null;
+			PlayerPrefs.SetInt("p4Choice", -1);
+		
             num_Players_selected--;
         }
 
