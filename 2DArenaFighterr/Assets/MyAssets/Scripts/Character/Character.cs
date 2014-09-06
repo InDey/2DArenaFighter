@@ -170,7 +170,7 @@ public class Character : MonoBehaviour
         }
     }
 
-    public void Shoot(float h, float v)
+    public virtual void Shoot(float h, float v)
     {
 
     }
@@ -215,22 +215,22 @@ public class Character : MonoBehaviour
                     CharacterWarewolf warewolf = new CharacterWarewolf();
                     //TODO set any initial things here
                     return warewolf;
-                } break;
+                } 
             case CharacterType.KNIGHT:
                 {
                     CharacterKnight knight = new CharacterKnight();
                     return knight;
-                } break;
+                } 
             case CharacterType.RED_BARON:
                 {
                     CharacterRedBaron redbaron = new CharacterRedBaron();
                     return redbaron;
-                } break;
+                } 
             case CharacterType.ROBOT:
                 {
                     CharacterRobot robot = new CharacterRobot();
                     return robot;
-                } break;
+                } 
         }
         return null;
     }

@@ -11,7 +11,8 @@ public class CharacterKnight : Character
 		maxJumps = 1;
     }
 
-	public void Shoot(float h, float v)
+    
+	public override void Shoot(float h, float v)
 	{
 		// If the player should shoot...
 		if (shoot)
