@@ -14,9 +14,10 @@ public class Character : MonoBehaviour
         ROBOT
     };
 
-    public static readonly String TAG_JUMP = "Jump";
-    public static readonly String TAG_DODGE = "Dodge";
-    public static readonly String TAG_SHOOT = "Shoot";
+    public static readonly String TAG_JUMP = "KeyO";
+    public static readonly String TAG_DODGE = "KeyA";
+    public static readonly String TAG_MOVE1 = "KeyU";
+	public static readonly String TAG_MOVE2 = "KeyY";
     public static readonly String TAG_GROUND = "ground";
     public static readonly String TAG_PLATFORM = "Platform";
     public static readonly String TAG_WALL = "Wall";
@@ -83,11 +84,17 @@ public class Character : MonoBehaviour
             dodge = true;
         }
 
-        // If the Throw button "q" is pressed and canShoot is ready
-        if (Input.GetButtonDown(TAG_SHOOT))
+        // If move 1 is pressed and canMove1 is ready
+        if (Input.GetButtonDown(TAG_MOVE1))
         {
             shoot = true;
         }
+
+		// If move 1 is pressed and canMove1 is ready
+		if (Input.GetButtonDown (TAG_MOVE2)) 
+		{
+
+		}
     }
 
     public void PlayerMovement()
@@ -130,7 +137,7 @@ public class Character : MonoBehaviour
 
         // Dodge
 		if (dodge) {
-			Dodge (h, v);
+			Dodge (h, -v);
 		}
 
         // Shoot
