@@ -29,10 +29,10 @@ public class PlayerHealth : MonoBehaviour
 //		healthScale = healthBar.transform.localScale;
 	}
 
-	void OnCollisionEnter2D (Collision2D col)
+	void OnTriggerEnter2D (Collider2D col)
 	{
 		// If the colliding gameobject is an Enemy...
-		if (col.gameObject.tag == "Enemy") {
+		if (col.tag == "Attack") {
 			// ... and if the time exceeds the time of the last hit plus the time between hits...
 			if (Time.time > lastHitTime + repeatDamagePeriod) {
 				// ... and if the player still has health...
