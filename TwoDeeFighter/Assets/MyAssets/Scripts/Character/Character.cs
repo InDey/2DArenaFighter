@@ -90,14 +90,22 @@ public class Character : MonoBehaviour
         // If move 1 is pressed and canMove1 is ready
         if (Input.GetButtonDown(TAG_MOVE1))
         {
-            shoot = true;
+            anim.SetBool("attackA", true);
+        }
+        else
+        {
+            anim.SetBool("attackA", false);
         }
 
 		// If move 1 is pressed and canMove1 is ready
 		if (Input.GetButtonDown (TAG_MOVE2)) 
 		{
-
-		}
+            anim.SetBool("attackB",true);
+        }
+        else
+        {
+            anim.SetBool("attackB", false);
+        }
     }
 
     public void PlayerMovement()

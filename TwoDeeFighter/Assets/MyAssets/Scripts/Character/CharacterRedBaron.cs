@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class CharacterRedBaron : Character
 {
-
-
 	public CharacterRedBaron()
     {
 		characterType = RED_BARON;
