@@ -13,5 +13,7 @@ public class CharacterRedBaron : Character
         jumpCount = 3;
         jumpForce = 4000;
         dodgeDist = 15;
+        damageA = 10;
+        damageB = 20;
     }
 }

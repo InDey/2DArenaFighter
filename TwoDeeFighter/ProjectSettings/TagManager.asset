@@ -17,6 +17,8 @@ TagManager:
   - P2
   - P3
   - P4
+  - AttackA
+  - AttackB
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

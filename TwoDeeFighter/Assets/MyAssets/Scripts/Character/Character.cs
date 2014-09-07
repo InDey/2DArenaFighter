@@ -6,24 +6,24 @@ using System.Text;
 
 public class Character : MonoBehaviour
 {
-	public const int WAREWOLF = 1;
-	public const int KNIGHT = 2;
-	public const int RED_BARON = 0;
-	public const int ROBOT = 3;
+    public const int WAREWOLF = 1;
+    public const int KNIGHT = 2;
+    public const int RED_BARON = 0;
+    public const int ROBOT = 3;
 
-	public String TAG_JUMP = "P1KeyO";
-	public String TAG_DODGE = "P1KeyA";
-	public String TAG_MOVE1 = "P1KeyU";
-	public String TAG_MOVE2 = "P1KeyY";
-	public String TAG_HOR = "P1Horizontal";
-	public String TAG_VER = "P1Vertical";
+    public String TAG_JUMP = "P1KeyO";
+    public String TAG_DODGE = "P1KeyA";
+    public String TAG_MOVE1 = "P1KeyU";
+    public String TAG_MOVE2 = "P1KeyY";
+    public String TAG_HOR = "P1Horizontal";
+    public String TAG_VER = "P1Vertical";
 
-	public const String TAG_GROUND = "ground";
-	public const String TAG_PLATFORM = "Platform";
-	public const String TAG_WALL = "Wall";
-	
-	public int characterType = -1;
-	public int playerNumber = 0;
+    public const String TAG_GROUND = "ground";
+    public const String TAG_PLATFORM = "Platform";
+    public const String TAG_WALL = "Wall";
+
+    public int characterType = -1;
+    public int playerNumber = 0;
 
     public bool facingRight = true;			// For determining which way the player is currently facing.
     public bool grounded = false;		    // Whether or not the player is grounded.
@@ -48,6 +48,8 @@ public class Character : MonoBehaviour
     public bool canShoot = false;		    // Condition for whether the player should shoot
     public bool shoot = false;		        // When true, the player shoots
     public float starSpeed = 2f;			// NinjaStar's thrown velocity
+    public float damageA = 5;
+    public float damageB = 15;
 
     public AudioClip[] taunts;				// Array of clips for when the player taunts.
     public float tauntProbability = 50f;	// Chance of a taunt happening.
@@ -61,7 +63,7 @@ public class Character : MonoBehaviour
     {
         // Get animator
 
-        anim = GetComponent<Animator> (); 
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -93,70 +95,83 @@ public class Character : MonoBehaviour
         if (Input.GetButtonDown(TAG_MOVE1))
         {
             anim.SetBool("attackA", true);
+            gameObject.tag = "AttackA";
         }
         else
         {
             anim.SetBool("attackA", false);
+            gameObject.tag = "Player";
         }
 
-		// If move 1 is pressed and canMove1 is ready
-		if (Input.GetButtonDown (TAG_MOVE2)) 
-		{
-            anim.SetBool("attackB",true);
+        // If move 1 is pressed and canMove1 is ready
+        if (Input.GetButtonDown(TAG_MOVE2))
+        {
+            anim.SetBool("attackB", true);
+            gameObject.tag = "AttackB";
+            gameObject.collider2D.isTrigger = true;
         }
         else
         {
             anim.SetBool("attackB", false);
+            gameObject.tag = "Player";
         }
     }
 
     public void PlayerMovement()
     {
         // Cache the horizontal input.
-		float h = Input.GetAxis(TAG_HOR);
-		float v = Input.GetAxis(TAG_VER);
+        float h = Input.GetAxis(TAG_HOR);
+        float v = Input.GetAxis(TAG_VER);
 
         // stop the playing from spinning
         //TODO fix this when touching uneven ground
-        if (!grounded) {
-			transform.eulerAngles = new Vector3 (0, 0, 0);
-		}
+        if (!grounded)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
         // The Speed animator parameter is set to the absolute value of the horizontal input.
-        	anim.SetFloat("Speed", Mathf.Abs(h));
+        anim.SetFloat("Speed", Mathf.Abs(h));
 
         // If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
-        if (h * rigidbody2D.velocity.x < maxSpeed) {
-			rigidbody2D.AddForce (Vector2.right * h * moveForce);
-		}
+        if (h * rigidbody2D.velocity.x < maxSpeed)
+        {
+            rigidbody2D.AddForce(Vector2.right * h * moveForce);
+        }
 
         // If the player's horizontal velocity is greater than the maxSpeed...
-        if (Mathf.Abs (rigidbody2D.velocity.x) > maxSpeed) {
-			rigidbody2D.velocity = new Vector2 (Mathf.Sign (rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
-		}
+        if (Mathf.Abs(rigidbody2D.velocity.x) > maxSpeed)
+        {
+            rigidbody2D.velocity = new Vector2(Mathf.Sign(rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
+        }
 
         // If the input is moving the player right and the player is facing left...
-        if (h > 0 && !facingRight) {
-			Flip ();
-		}
+        if (h > 0 && !facingRight)
+        {
+            Flip();
+        }
         // Otherwise if the input is moving the player left and the player is facing right...
-        else if (h < 0 && facingRight) {
-			Flip ();
-		}
+        else if (h < 0 && facingRight)
+        {
+            Flip();
+        }
 
         // Jump
-		if (jump && jumpCount <= maxJumps) {
-			Jump (h, v);
-		}
+        if (jump && jumpCount <= maxJumps)
+        {
+            Jump(h, v);
+        }
 
         // Dodge
-		if (dodge) {
-			Dodge (h, -v);
-		}
+        if (dodge)
+        {
+            Dodge(h, -v);
+        }
 
         // Shoot
-		if (canShoot && shoot) {
-			Shoot (h, v);
-		}
+        if (canShoot && shoot)
+        {
+            Shoot(h, v);
+        }
     }
 
 
@@ -173,24 +188,24 @@ public class Character : MonoBehaviour
 
     public void Jump(float h, float v)
     {
-	    // Set the Jump animator trigger parameter.
-	    //			anim.SetTrigger ("Jump");
+        // Set the Jump animator trigger parameter.
+        //			anim.SetTrigger ("Jump");
 
-	    // Play a random jump audio clip.
-	    //int i = Random.Range(0, jumpClips.Length);
-	    //			AudioSource.PlayClipAtPoint (jumpClips [i], transform.position);
+        // Play a random jump audio clip.
+        //int i = Random.Range(0, jumpClips.Length);
+        //			AudioSource.PlayClipAtPoint (jumpClips [i], transform.position);
 
-	    rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+        rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 
-	    // Make sure the player can't jump again until the jump conditions from Update are satisfied. 
-	    jump = false;
+        // Make sure the player can't jump again until the jump conditions from Update are satisfied. 
+        jump = false;
     }
 
     public void Dodge(float h, float v)
     {
-	    dodge = false;
-		canDodge = false;
-	    transform.position = new Vector3(transform.position.x + (h * dodgeDist), transform.position.y + (v * dodgeDist), 0);
+        dodge = false;
+        canDodge = false;
+        transform.position = new Vector3(transform.position.x + (h * dodgeDist), transform.position.y + (v * dodgeDist), 0);
     }
 
     public virtual void Shoot(float h, float v)
@@ -209,48 +224,48 @@ public class Character : MonoBehaviour
         this.jumpForce = jumpForce;
     }
 
-	public void setPlayerNumber(int playerNumber)
-	{
-		switch (playerNumber) 
-		{
-		case 0:
-		{
-			TAG_JUMP = "P1KeyO";
-			TAG_DODGE = "P1KeyA";
-			TAG_MOVE1 = "P1KeyU";
-			TAG_MOVE2 = "P1KeyY";
-			TAG_HOR = "P1Horizontal";
-			TAG_VER = "P1Vertical";
-		} break;
-		case 1:
-		{
-			TAG_JUMP = "P2KeyO";
-			TAG_DODGE = "P2KeyA";
-			TAG_MOVE1 = "P2KeyU";
-			TAG_MOVE2 = "P2KeyY";
-			TAG_HOR = "P2Horizontal";
-			TAG_VER = "P2Vertical";
-		} break;
-		case 2:
-		{
-			TAG_JUMP = "P3KeyO";
-			TAG_DODGE = "P3KeyA";
-			TAG_MOVE1 = "P3KeyU";
-			TAG_MOVE2 = "P3KeyY";
-			TAG_HOR = "P3Horizontal";
-			TAG_VER = "P3Vertical";
-		} break;
-		case 3:
-		{
-			TAG_JUMP = "P4KeyO";
-			TAG_DODGE = "P4KeyA";
-			TAG_MOVE1 = "P4KeyU";
-			TAG_MOVE2 = "P4KeyY";
-			TAG_HOR = "P4Horizontal";
-			TAG_VER = "P4Vertical";
-		} break;
-		}
-	}
+    public void setPlayerNumber(int playerNumber)
+    {
+        switch (playerNumber)
+        {
+            case 0:
+                {
+                    TAG_JUMP = "P1KeyO";
+                    TAG_DODGE = "P1KeyA";
+                    TAG_MOVE1 = "P1KeyU";
+                    TAG_MOVE2 = "P1KeyY";
+                    TAG_HOR = "P1Horizontal";
+                    TAG_VER = "P1Vertical";
+                } break;
+            case 1:
+                {
+                    TAG_JUMP = "P2KeyO";
+                    TAG_DODGE = "P2KeyA";
+                    TAG_MOVE1 = "P2KeyU";
+                    TAG_MOVE2 = "P2KeyY";
+                    TAG_HOR = "P2Horizontal";
+                    TAG_VER = "P2Vertical";
+                } break;
+            case 2:
+                {
+                    TAG_JUMP = "P3KeyO";
+                    TAG_DODGE = "P3KeyA";
+                    TAG_MOVE1 = "P3KeyU";
+                    TAG_MOVE2 = "P3KeyY";
+                    TAG_HOR = "P3Horizontal";
+                    TAG_VER = "P3Vertical";
+                } break;
+            case 3:
+                {
+                    TAG_JUMP = "P4KeyO";
+                    TAG_DODGE = "P4KeyA";
+                    TAG_MOVE1 = "P4KeyU";
+                    TAG_MOVE2 = "P4KeyY";
+                    TAG_HOR = "P4Horizontal";
+                    TAG_VER = "P4Vertical";
+                } break;
+        }
+    }
 
     public float getSpeed()
     {
@@ -272,16 +287,39 @@ public class Character : MonoBehaviour
         return dodgeDist;
     }
 
-	public int getCharacterType()
-	{
-		return characterType;
-	}
+    public int getCharacterType()
+    {
+        return characterType;
+    }
 
-	public int getPlayerNumber()
-	{
-		return playerNumber;
-	}
-	
+    public int getPlayerNumber()
+    {
+        return playerNumber;
+    }
+
+    public float getDmgA()
+    {
+        return damageA;
+    }
+
+    public float getDmgB()
+    {
+        return damageB;
+    }
+
+    public float getDmg()
+    {
+        if(gameObject.tag == "AttackA")
+        {
+            return getDmgA();
+        }
+        if(gameObject.tag == "AttackB")
+        {
+            return getDmgB();
+        }
+        return 0;
+    }
+
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == TAG_GROUND || coll.gameObject.tag == TAG_PLATFORM || coll.gameObject.tag == TAG_WALL)
