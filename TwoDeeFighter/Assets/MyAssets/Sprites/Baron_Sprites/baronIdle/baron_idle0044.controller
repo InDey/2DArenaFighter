@@ -404,7 +404,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: baronIdle
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 9fdb0f8a66a734a49bdc265113efc96f, type: 2}

@@ -26,12 +26,12 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: crank_idle
-  m_Speed: 1
+  m_Speed: 2.25
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 583b0754a800204499701ea0e9529b06, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 50, y: 50, z: 0}
+  m_Position: {x: 48, y: 48, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
