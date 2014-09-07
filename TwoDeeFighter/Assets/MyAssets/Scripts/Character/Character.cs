@@ -58,7 +58,6 @@ public class Character : MonoBehaviour
 
     private Animator anim;					// Reference to the player's animator component.
 
-
     void Awake()
     {
         // Get animator
@@ -94,26 +93,13 @@ public class Character : MonoBehaviour
         // If move 1 is pressed and canMove1 is ready
         if (Input.GetButtonDown(TAG_MOVE1))
         {
-            anim.SetBool("attackA", true);
-            gameObject.tag = "AttackA";
-        }
-        else
-        {
-            anim.SetBool("attackA", false);
-            gameObject.tag = "Player";
+            anim.SetTrigger("AttackA");
         }
 
         // If move 1 is pressed and canMove1 is ready
         if (Input.GetButtonDown(TAG_MOVE2))
         {
-            anim.SetBool("attackB", true);
-            gameObject.tag = "AttackB";
-            gameObject.collider2D.isTrigger = true;
-        }
-        else
-        {
-            anim.SetBool("attackB", false);
-            gameObject.tag = "Player";
+            anim.SetTrigger("AttackB");
         }
     }
 
@@ -338,6 +324,3 @@ public class Character : MonoBehaviour
         }
     }
 }
-
-
-

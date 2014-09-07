@@ -166,7 +166,7 @@ public class SelectionManager : MonoBehaviour
         }
 
         // START GAME
-        if (Input.GetButtonUp("Start") && (num_Players_selected >= 1))
+        if (Input.GetButtonUp("Start") )
         {
             if (P1choice.finalChoice != null)
             {

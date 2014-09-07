@@ -27,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.57754183, y: -36.3640289, z: 0}
-  m_LocalScale: {x: -2.65540504, y: 2.65540147, z: 1}
+  m_LocalPosition: {x: 37.2053337, y: -36.6341896, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -172,11 +172,12 @@ Animator:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8fcaa1f5dcb21b749be3452037dab0d4, type: 2}
+  m_Controller: {fileID: 9100000, guid: bb7f77ebc4d3b534f8d13a86895fd875, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -188,12 +189,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4423470b1e04a2cb917d28a457ecb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TAG_JUMP: P1KeyO
-  TAG_DODGE: P1KeyA
-  TAG_MOVE1: P1KeyU
-  TAG_MOVE2: P1KeyY
-  TAG_HOR: P1Horizontal
-  TAG_VER: P1Vertical
+  TAG_JUMP: P3KeyO
+  TAG_DODGE: P3KeyA
+  TAG_MOVE1: P3KeyU
+  TAG_MOVE2: P3KeyY
+  TAG_HOR: P3Horizontal
+  TAG_VER: P3Vertical
   characterType: 3
   playerNumber: 0
   facingRight: 1
@@ -212,6 +213,8 @@ MonoBehaviour:
   canShoot: 0
   shoot: 0
   starSpeed: 2
+  damageA: 5
+  damageB: 15
   taunts: []
   tauntProbability: 50
   tauntDelay: 1
@@ -233,7 +236,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1024582385
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b4ab74006b6fbc040ac51ba2744b8536, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

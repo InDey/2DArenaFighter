@@ -27,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .654467344, y: -36.8553276, z: 0}
-  m_LocalScale: {x: 1.88708353, y: 1.88708246, z: 1}
+  m_LocalPosition: {x: .287776768, y: -35.9720917, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,7 +54,7 @@ PolygonCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 24ac79603fb61400588e37d9f6fe952a, type: 2}
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
@@ -234,11 +234,12 @@ Animator:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 66edd673ae48f9247a5c2e14631e2c04, type: 2}
+  m_Controller: {fileID: 9100000, guid: 753dab13131fdff46a588a9261e4f425, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,12 +251,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3368de220aac84f5dbd021cd1bed57ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TAG_JUMP: P1KeyO
-  TAG_DODGE: P1KeyA
-  TAG_MOVE1: P1KeyU
-  TAG_MOVE2: P1KeyY
-  TAG_HOR: P1Horizontal
-  TAG_VER: P1Vertical
+  TAG_JUMP: P2KeyO
+  TAG_DODGE: P2KeyA
+  TAG_MOVE1: P2KeyU
+  TAG_MOVE2: P2KeyY
+  TAG_HOR: P2Horizontal
+  TAG_VER: P2Vertical
   characterType: 1
   playerNumber: 0
   facingRight: 1
@@ -274,6 +275,8 @@ MonoBehaviour:
   canShoot: 0
   shoot: 0
   starSpeed: 2
+  damageA: 5
+  damageB: 15
   taunts: []
   tauntProbability: 50
   tauntDelay: 1
@@ -295,7 +298,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1024582385
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b0ecbd700dafb004dbb792157e85bf84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
