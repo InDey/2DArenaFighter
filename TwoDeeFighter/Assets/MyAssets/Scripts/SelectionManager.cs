@@ -240,29 +240,23 @@ public class SelectionManager : MonoBehaviour
 
     void reposition(string Player, playerChoice pChoice, Transform[] pPos)
     {
-        if (Input.GetAxis(Player + "LeftRight") > 0)
-        {
-            if (pChoice.index == NUM_CHARS - 1)
-            {
-                pChoice.index = 0;
-                pChoice.icon.transform.position = pPos[pChoice.index].position;
-            }
-            else
-            {
-                pChoice.icon.transform.position = pPos[++pChoice.index].position;
-            }
+		if (Input.GetAxis(Player + "LeftRight") > 0)
+		{
+			pChoice.index++;
+			if (pChoice.index > NUM_CHARS - 1)
+			{
+				pChoice.index = 0;
+			}
+			pChoice.icon.transform.position = pPos[pChoice.index].position;
         }
         else if (Input.GetAxis(Player + "LeftRight") < 0)
         {
-            if (pChoice.index == 0)
-            {
-                pChoice.index = NUM_CHARS - 1;
-                pChoice.icon.transform.position = pPos[pChoice.index].position;
-            }
-            else
-            {
-                pChoice.icon.transform.position = pPos[--pChoice.index].position;
-            }
-        }
-    }
+			pChoice.index--;
+			if (pChoice.index < 0)
+			{
+				pChoice.index = NUM_CHARS - 1;
+			}
+			pChoice.icon.transform.position = pPos[pChoice.index].position;
+		}
+	}
 }
