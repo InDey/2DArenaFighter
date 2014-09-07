@@ -153,11 +153,11 @@ public class Character : MonoBehaviour
             Dodge(h, -v);
         }
 
-        // Shoot
-        if (canShoot && shoot)
-        {
-            Shoot(h, v);
-        }
+        //// Shoot
+        //if (canShoot && shoot)
+        //{
+        //    Shoot(h, v);
+        //}
     }
 
 
@@ -222,7 +222,8 @@ public class Character : MonoBehaviour
                     TAG_MOVE2 = "P1KeyY";
                     TAG_HOR = "P1Horizontal";
                     TAG_VER = "P1Vertical";
-                } break;
+                    break;
+                } 
             case 1:
                 {
                     TAG_JUMP = "P2KeyO";
@@ -231,7 +232,8 @@ public class Character : MonoBehaviour
                     TAG_MOVE2 = "P2KeyY";
                     TAG_HOR = "P2Horizontal";
                     TAG_VER = "P2Vertical";
-                } break;
+                    break;
+                } 
             case 2:
                 {
                     TAG_JUMP = "P3KeyO";
@@ -240,7 +242,8 @@ public class Character : MonoBehaviour
                     TAG_MOVE2 = "P3KeyY";
                     TAG_HOR = "P3Horizontal";
                     TAG_VER = "P3Vertical";
-                } break;
+                    break;
+                } 
             case 3:
                 {
                     TAG_JUMP = "P4KeyO";
@@ -249,7 +252,8 @@ public class Character : MonoBehaviour
                     TAG_MOVE2 = "P4KeyY";
                     TAG_HOR = "P4Horizontal";
                     TAG_VER = "P4Vertical";
-                } break;
+                    break;
+                } 
         }
     }
 
