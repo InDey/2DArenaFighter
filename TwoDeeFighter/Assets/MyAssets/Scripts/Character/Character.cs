@@ -56,10 +56,12 @@ public class Character : MonoBehaviour
 
     private Animator anim;					// Reference to the player's animator component.
 
+
     void Awake()
     {
         // Get animator
-        	anim = GetComponent<Animator> (); 
+
+        anim = GetComponent<Animator> (); 
     }
 
     void Update()
